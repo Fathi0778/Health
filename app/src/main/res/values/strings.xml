@@ -1,3 +1,244 @@
+
 <resources>
     <string name="app_name">HealthMate</string>
+    <string name="app_tagline">Personal Health &amp; Wellness Tracker</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_records">Records</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Screen titles -->
+    <string name="title_add_record">Add health record</string>
+    <string name="title_edit_record">Edit record</string>
+    <string name="title_records">Health records</string>
+    <string name="title_progress">Progress</string>
+    <string name="title_sleep">Sleep tracker</string>
+    <string name="title_settings">Settings</string>
+
+    <!-- Welcome -->
+    <string name="welcome_title">Welcome to HealthMate</string>
+    <string name="welcome_subtitle">Your personal companion for a healthier lifestyle.</string>
+    <string name="welcome_description">Log your steps, calories, water and sleep each day, then watch your weekly progress grow.</string>
+    <string name="welcome_feature_steps">Steps &amp; calories</string>
+    <string name="welcome_feature_water">Water intake</string>
+    <string name="welcome_feature_sleep">Sleep hours</string>
+    <string name="welcome_feature_progress">Weekly progress</string>
+    <string name="welcome_get_started">Get Started</string>
+    <string name="welcome_privacy">No account needed · Works fully offline</string>
+
+    <!-- Metric names and units -->
+    <string name="metric_steps">Steps</string>
+    <string name="metric_calories">Calories</string>
+    <string name="metric_water">Water</string>
+    <string name="metric_sleep">Sleep</string>
+    <string name="unit_steps">steps</string>
+    <string name="unit_kcal">kcal</string>
+    <string name="unit_ml">ml</string>
+    <string name="unit_hours">hrs</string>
+    <string name="unit_h">h</string>
+    <string name="unit_min">min</string>
+    <string name="value_steps">%1$s steps</string>
+    <string name="value_kcal">%1$s kcal</string>
+    <string name="value_ml">%1$s ml</string>
+    <string name="value_hours">%1$s h</string>
+    <string name="value_hours_long">%1$s hours</string>
+
+    <!-- Dashboard -->
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="dashboard_wellness_title">Today\'s wellness</string>
+    <string name="dashboard_wellness_score">%1$d%%</string>
+    <string name="dashboard_wellness_summary">You have reached %1$d%% of today\'s goals across steps, calories, water and sleep.</string>
+    <string name="dashboard_wellness_complete">Amazing! You hit every goal today.</string>
+    <string name="dashboard_empty_title">Nothing logged for today yet</string>
+    <string name="dashboard_empty_message">Add today\'s activity to see your progress fill up.</string>
+    <string name="dashboard_todays_activity">Today\'s activity</string>
+    <string name="dashboard_goal">Goal: %1$s</string>
+    <string name="dashboard_headline_progress">Keep it up!</string>
+    <string name="dashboard_headline_complete">All goals reached</string>
+    <string name="cd_metric_card">%1$s: %2$s %3$s, %4$d percent of daily goal</string>
+    <string name="dashboard_add_record">Add today\'s record</string>
+    <string name="dashboard_update_record">Update today\'s record</string>
+    <string name="dashboard_recent_activity">Recent activity</string>
+    <string name="dashboard_see_all">See all</string>
+    <string name="dashboard_recent_empty">No activity recorded yet. Your latest records will appear here.</string>
+    <string name="dashboard_sleep_insight_title">Sleep tracker</string>
+    <string name="dashboard_sleep_insight_body">See your nightly sleep, weekly average and goal progress.</string>
+    <plurals name="dashboard_streak">
+        <item quantity="one">🔥 %d day streak</item>
+        <item quantity="other">🔥 %d day streak</item>
+    </plurals>
+    <string name="recent_summary">%1$s steps · %2$s kcal · %3$s ml · %4$s sleep</string>
+
+    <string-array name="motivational_messages">
+        <item>Small steps every day add up to big changes.</item>
+        <item>A glass of water is a great place to start.</item>
+        <item>Rest is part of progress. Protect your sleep.</item>
+        <item>Move a little more than yesterday.</item>
+        <item>Consistency beats intensity. Keep showing up.</item>
+        <item>Your body hears everything your habits say.</item>
+        <item>Progress, not perfection.</item>
+    </string-array>
+
+    <!-- Record form -->
+    <string name="form_date">Date</string>
+    <string name="form_steps">Steps walked</string>
+    <string name="form_calories">Calories burned</string>
+    <string name="form_water">Water intake</string>
+    <string name="form_sleep_hours">Sleep hours</string>
+    <string name="form_sleep_minutes">Minutes</string>
+    <string name="form_steps_helper">Whole number, 0 – 100,000</string>
+    <string name="form_calories_helper">Whole number, 0 – 20,000</string>
+    <string name="form_water_helper">Millilitres, 0 – 20,000</string>
+    <string name="form_sleep_hours_helper">0 – 24</string>
+    <string name="form_sleep_minutes_helper">0 – 59 (optional)</string>
+    <string name="form_pick_date">Choose a date</string>
+    <string name="form_section_details">Daily details</string>
+    <string name="form_section_subtitle">One record per day. Enter 0 if you did not track something.</string>
+    <string name="action_save_record">Save record</string>
+    <string name="action_clear_form">Clear form</string>
+    <string name="action_save_changes">Save changes</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_edit_existing">Edit existing record</string>
+    <string name="action_back">Back</string>
+
+    <!-- Validation messages -->
+    <string name="error_required">This field is required</string>
+    <string name="error_date_required">Please choose a date</string>
+    <string name="error_date_invalid">Please choose a valid date</string>
+    <string name="error_date_future">Date cannot be in the future</string>
+    <string name="error_whole_number">Enter a whole number (no decimals)</string>
+    <string name="error_negative">Value cannot be negative</string>
+    <string name="error_too_large">Maximum allowed is %1$s</string>
+    <string name="error_too_small">Minimum allowed is %1$s</string>
+    <string name="error_sleep_invalid">Enter hours like 7 or 7.5</string>
+    <string name="error_sleep_over_24">Total sleep can\'t be more than 24 hours</string>
+    <string name="error_range">Enter a value between %1$s and %2$s</string>
+    <string name="error_fix_fields">Please fix the highlighted fields</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_date_conflict">Another record already uses this date</string>
+
+    <!-- Add / edit results -->
+    <string name="msg_record_saved">Record saved for %1$s</string>
+    <string name="msg_record_updated">Record updated</string>
+    <string name="msg_record_deleted">Record deleted</string>
+    <string name="msg_record_missing">This record no longer exists</string>
+    <string name="msg_form_cleared">Form cleared</string>
+    <string name="duplicate_title">Record already exists</string>
+    <string name="duplicate_message">You already have a record for %1$s. HealthMate keeps one record per day. Would you like to edit it instead?</string>
+    <string name="edit_subtitle">Editing the record for %1$s</string>
+    <string name="duplicate_banner">A record for this date already exists.</string>
+
+    <!-- Records list -->
+    <string name="records_subtitle_all">Newest first</string>
+    <string name="records_search_hint">Search by date (e.g. 2026-10)</string>
+    <string name="records_pick_date">Pick a date to filter</string>
+    <string name="records_clear_filter">Clear filter</string>
+    <string name="records_filter_all">All</string>
+    <string name="records_filter_today">Today</string>
+    <string name="records_filter_month">This month</string>
+    <string name="records_filter_active">Filter: %1$s</string>
+    <string name="records_empty_title">No records yet</string>
+    <string name="records_empty_message">Your saved health records will appear here.</string>
+    <string name="records_empty_add">Add your first record</string>
+    <string name="records_no_match_title">No matching records</string>
+    <string name="records_no_match_message">No records match \"%1$s\". Try another date or clear the filter.</string>
+    <string name="delete_title">Delete this record?</string>
+    <string name="delete_message">The record for %1$s will be permanently removed.</string>
+    <string name="cd_edit_record">Edit record for %1$s</string>
+    <string name="cd_delete_record">Delete record for %1$s</string>
+    <plurals name="records_count">
+        <item quantity="one">%d record</item>
+        <item quantity="other">%d records</item>
+    </plurals>
+
+    <!-- Progress -->
+    <string name="progress_subtitle">Last 7 days · %1$s – %2$s</string>
+    <string name="progress_avg_steps">Avg daily steps</string>
+    <string name="progress_avg_water">Avg daily water</string>
+    <string name="progress_total_calories">Total calories</string>
+    <string name="progress_avg_sleep">Avg sleep</string>
+    <string name="progress_chart_steps">Steps</string>
+    <string name="progress_chart_calories">Calories burned</string>
+    <string name="progress_chart_water">Water intake</string>
+    <string name="progress_chart_sleep">Sleep duration</string>
+    <string name="progress_goal_legend">Dashed line = daily goal</string>
+    <string name="progress_open_sleep">Open sleep tracker</string>
+    <plurals name="progress_missing_note">
+        <item quantity="one">Averages are calculated only from days that have a record (%1$d of 7 days). Days without a record show as an empty bar.</item>
+        <item quantity="other">Averages are calculated only from days that have a record (%1$d of 7 days). Days without a record show as an empty bar.</item>
+    </plurals>
+    <string name="progress_no_data">No records in the last 7 days. Add a record to see your charts.</string>
+    <string name="chart_goal">Goal</string>
+    <string name="chart_cd">%1$s chart for the last 7 days. %2$s</string>
+
+    <!-- Sleep -->
+    <string name="sleep_recorded">Sleep recorded: %1$s</string>
+    <string name="sleep_not_recorded">No sleep recorded for today</string>
+    <string name="sleep_goal_value">Goal: %1$s hours</string>
+    <string name="sleep_goal_met">Goal met — well rested!</string>
+    <string name="sleep_goal_short">%1$s below your goal</string>
+    <string name="sleep_weekly_average">Weekly average</string>
+    <string name="sleep_nights_goal">Nights at goal</string>
+    <string name="sleep_best_night">Best night</string>
+    <string name="sleep_nights_value">%1$d of %2$d</string>
+    <string name="sleep_last_7">Last 7 nights</string>
+    <string name="sleep_history">Sleep history</string>
+    <string name="sleep_history_empty">No sleep logged yet. Add a record with your sleep hours and minutes.</string>
+    <string name="sleep_status_met">Goal met</string>
+    <string name="sleep_status_below">Below goal</string>
+    <string name="sleep_log">Log sleep</string>
+    <string name="sleep_disclaimer">HealthMate only shows the sleep you log. It does not diagnose sleep conditions. If you have concerns about your sleep, talk to a healthcare professional.</string>
+
+    <!-- Settings -->
+    <string name="settings_goals_title">Daily goals</string>
+    <string name="settings_goals_subtitle">Used for the progress bars, wellness score and charts.</string>
+    <string name="settings_goal_steps">Step goal</string>
+    <string name="settings_goal_water">Water goal</string>
+    <string name="settings_goal_calories">Calorie-burn goal</string>
+    <string name="settings_goal_sleep">Sleep goal</string>
+    <string name="settings_goal_note">These are example targets you can change. They are not medical recommendations.</string>
+    <string name="settings_range">Between %1$s and %2$s</string>
+    <string name="settings_save_goals">Save goals</string>
+    <string name="settings_reset_goals">Reset to defaults</string>
+    <string name="settings_goals_saved">Goals saved</string>
+    <string name="settings_goals_reset">Goals reset to defaults</string>
+    <string name="settings_about_title">About HealthMate</string>
+    <string name="settings_about_body">HealthMate is an offline personal health and wellness tracker. All your records are stored privately on this device in a local SQLite database.</string>
+    <string name="settings_version">Version %1$s (build %2$d)</string>
+    <string name="settings_privacy">Your data never leaves this device</string>
+    <string name="settings_show_welcome">Show welcome screen again</string>
+    <!-- Login / create account -->
+    <string name="login_title_login">Welcome back</string>
+    <string name="login_subtitle_login">Log in to see your health records.</string>
+    <string name="login_title_register">Create your account</string>
+    <string name="login_subtitle_register">Each person gets their own records, goals and charts.</string>
+    <string name="login_username">Username</string>
+    <string name="login_username_helper">3–20 letters, numbers or _</string>
+    <string name="login_password">Password</string>
+    <string name="login_password_helper">At least 6 characters</string>
+    <string name="login_confirm_password">Confirm password</string>
+    <string name="login_button_login">Log in</string>
+    <string name="login_button_register">Create account</string>
+    <string name="login_switch_to_register">New here? Create an account</string>
+    <string name="login_switch_to_login">Already have an account? Log in</string>
+    <string name="login_error_wrong">Wrong username or password</string>
+    <string name="login_error_taken">This username is already taken</string>
+    <string name="login_error_username">Use 3–20 letters, numbers or _ (no spaces)</string>
+    <string name="login_error_password_short">Password must be at least 6 characters</string>
+    <string name="login_error_password_match">Passwords do not match</string>
+    <string name="login_welcome_user">Welcome, %1$s!</string>
+    <string name="login_offline_note">Accounts are stored only on this phone · Works offline</string>
+    <string name="settings_account_title">Account</string>
+    <string name="settings_signed_in_as">Signed in as %1$s</string>
+    <string name="settings_logout">Log out</string>
+    <string name="settings_logout_title">Log out?</string>
+    <string name="settings_logout_message">Your records stay saved on this phone. Log in again to see them.</string>
 </resources>

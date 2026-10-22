@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== Shapes ===== -->
+    <style name="ShapeAppearance.HealthMate.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="ShapeAppearance.HealthMate.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="ShapeAppearance.HealthMate.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ===== Cards ===== -->
+    <style name="Widget.HealthMate.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/hm_surface</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/hm_outline</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.HealthMate.Card.Flat" parent="Widget.HealthMate.Card">
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- ===== Inputs ===== -->
+    <style name="Widget.HealthMate.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxStrokeColor">@color/hm_primary</item>
+        <item name="boxBackgroundColor">@color/hm_surface</item>
+        <item name="hintTextColor">@color/hm_primary</item>
+        <item name="startIconTint">@color/hm_text_secondary</item>
+        <item name="helperTextTextColor">@color/hm_text_secondary</item>
+        <item name="suffixTextColor">@color/hm_text_secondary</item>
+    </style>
+
+    <!-- ===== Buttons ===== -->
+    <style name="Widget.HealthMate.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.HealthMate.Medium</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+
+    <style name="Widget.HealthMate.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.HealthMate.Medium</item>
+        <item name="strokeColor">@color/hm_outline</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Widget.HealthMate.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.HealthMate.Button.White" parent="Widget.HealthMate.Button">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/hm_primary</item>
+        <item name="iconTint">@color/hm_primary</item>
+    </style>
+
+    <!-- ===== Chips (quick filters on the Records screen) ===== -->
+    <style name="Widget.HealthMate.FilterChip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/filter_chip_background</item>
+        <item name="android:textColor">@color/filter_chip_text</item>
+        <item name="chipStrokeColor">@color/hm_outline</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="checkedIconTint">@color/hm_primary_dark</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.HealthMate.Pill</item>
+    </style>
+
+    <!-- ===== Bottom navigation ===== -->
+    <style name="Widget.HealthMate.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/hm_surface</item>
+        <item name="itemIconTint">@color/bottom_nav_item</item>
+        <item name="itemTextColor">@color/bottom_nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.HealthMate.BottomNavigation.Indicator</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.HealthMate.NavLabel</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.HealthMate.NavLabel</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.HealthMate.BottomNavigation.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/hm_primary_light</item>
+    </style>
+
+    <!-- ===== Typography ===== -->
+    <style name="TextAppearance.HealthMate.Display" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/hm_text_primary</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.HealthMate.Headline" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/hm_text_primary</item>
+    </style>
+
+    <style name="TextAppearance.HealthMate.Title" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/hm_text_primary</item>
+    </style>
+
+    <style name="TextAppearance.HealthMate.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/hm_text_secondary</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="TextAppearance.HealthMate.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/hm_text_secondary</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="TextAppearance.HealthMate.Value" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/hm_text_primary</item>
+    </style>
+
+    <style name="TextAppearance.HealthMate.NavLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Reusable layout snippets -->
+    <style name="HealthMate.SectionTitle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.HealthMate.Title</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:accessibilityHeading">true</item>
+    </style>
+
+    <style name="HealthMate.WelcomeFeature" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_glass</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="drawableTint">@color/white</item>
+    </style>
+
+    <!-- One value (icon + text) on a record card -->
+    <style name="HealthMate.RecordStat" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/hm_text_primary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="HealthMate.IconChip" parent="">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">9dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+</resources>

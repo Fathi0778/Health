@@ -1,9 +1,43 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.HealthMate" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Base application theme: Material 3, light, HealthMate palette. -->
+    <style name="Base.Theme.HealthMate" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/hm_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/hm_primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/hm_primary_dark</item>
+        <item name="colorSecondary">@color/hm_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/hm_secondary_light</item>
+        <item name="colorOnSecondaryContainer">@color/hm_text_primary</item>
+        <item name="colorError">@color/hm_error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:colorBackground">@color/hm_background</item>
+        <item name="colorOnBackground">@color/hm_text_primary</item>
+        <item name="colorSurface">@color/hm_surface</item>
+        <item name="colorOnSurface">@color/hm_text_primary</item>
+        <item name="colorSurfaceVariant">@color/hm_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/hm_text_secondary</item>
+        <item name="colorOutline">@color/hm_outline</item>
+        <item name="colorSurfaceContainer">@color/hm_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/hm_surface</item>
+        <item name="colorSurfaceContainerHighest">@color/hm_surface_variant</item>
+        <item name="android:windowBackground">@color/hm_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="materialCardViewStyle">@style/Widget.HealthMate.Card</item>
+        <item name="textInputStyle">@style/Widget.HealthMate.TextInput</item>
+        <item name="bottomNavigationStyle">@style/Widget.HealthMate.BottomNavigation</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.HealthMate.Dialog</item>
     </style>
 
     <style name="Theme.HealthMate" parent="Base.Theme.HealthMate" />
+
+    <!-- Welcome screen: same theme, blue gradient behind light status-bar icons. -->
+    <style name="Theme.HealthMate.Welcome" parent="Theme.HealthMate">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="ThemeOverlay.HealthMate.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.HealthMate.Large</item>
+        <item name="colorSurfaceContainerHigh">@color/hm_surface</item>
+    </style>
 </resources>

@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Main app colours -->
+    <color name="hm_primary">#2563EB</color>
+    <color name="hm_primary_dark">#1D4ED8</color>
+    <color name="hm_primary_light">#DBEAFE</color>
+    <color name="hm_secondary">#0D9488</color>
+    <color name="hm_secondary_light">#CCFBF1</color>
+    <color name="hm_secondary_dark">#0F766E</color>
+    <color name="hm_background">#F8FAFC</color>
+    <color name="hm_surface">#FFFFFF</color>
+    <color name="hm_surface_variant">#F1F5F9</color>
+    <color name="hm_outline">#E2E8F0</color>
+    <color name="hm_text_primary">#0F172A</color>
+    <color name="hm_text_secondary">#64748B</color>
+    <color name="hm_text_on_dark">#FFFFFF</color>
+    <color name="hm_text_on_dark_muted">#DBEAFE</color>
+
+    <!-- Metric colours -->
+    <color name="hm_steps">#8B5CF6</color>
+    <color name="hm_steps_light">#EDE9FE</color>
+    <color name="hm_calories">#EF4444</color>
+    <color name="hm_calories_light">#FEE2E2</color>
+    <color name="hm_water">#0EA5E9</color>
+    <color name="hm_water_light">#E0F2FE</color>
+    <color name="hm_sleep">#6366F1</color>
+    <color name="hm_sleep_light">#E0E7FF</color>
+
+    <!-- Darker shades for small text on the light tints (WCAG AA contrast) -->
+    <color name="hm_steps_dark">#6D28D9</color>
+    <color name="hm_calories_dark">#B91C1C</color>
+    <color name="hm_water_dark">#0369A1</color>
+    <color name="hm_sleep_dark">#4338CA</color>
+
+    <!-- Status colours -->
+    <color name="hm_success">#16A34A</color>
+    <color name="hm_success_dark">#15803D</color>
+    <color name="hm_success_light">#DCFCE7</color>
+    <color name="hm_error">#DC2626</color>
+    <color name="hm_error_light">#FEE2E2</color>
+    <color name="hm_warning">#B45309</color>
+    <color name="hm_warning_light">#FEF3C7</color>
+
+    <color name="hm_white_20">#33FFFFFF</color>
+    <color name="hm_white_35">#59FFFFFF</color>
+
+    <!-- basic colours -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
