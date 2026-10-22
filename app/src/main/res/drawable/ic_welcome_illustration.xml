@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Welcome illustration: soft rings, a heart with heartbeat and four small metric dots. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="220dp"
+    android:height="220dp"
+    android:viewportWidth="220"
+    android:viewportHeight="220">
+    <path android:fillColor="#1AFFFFFF" android:pathData="M110,110m-108,0a108,108 0,1 1,216 0a108,108 0,1 1,-216 0" />
+    <path android:fillColor="#26FFFFFF" android:pathData="M110,110m-82,0a82,82 0,1 1,164 0a82,82 0,1 1,-164 0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M110,110m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0" />
+    <group
+        android:scaleX="3.2"
+        android:scaleY="3.2"
+        android:translateX="71.6"
+        android:translateY="72">
+        <path
+            android:fillColor="#2563EB"
+            android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z" />
+        <path
+            android:pathData="M4.5,11.5h3.2l1.6,-3.2 2.8,6 2,-4.2 1.2,1.4h4.2"
+            android:strokeWidth="1.3"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+    <!-- metric dots: steps, calories, water, sleep -->
+    <path android:fillColor="#8B5CF6" android:pathData="M38,52m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+    <path android:fillColor="#F97316" android:pathData="M184,46m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+    <path android:fillColor="#0EA5E9" android:pathData="M178,172m-13,0a13,13 0,1 1,26 0a13,13 0,1 1,-26 0" />
+    <path android:fillColor="#6366F1" android:pathData="M42,170m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+</vector>

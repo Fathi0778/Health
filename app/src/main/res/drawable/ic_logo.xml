@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- In-app logo mark: gradient rounded square with heart + pulse. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <path android:pathData="M10,0h20a10,10 0,0 1,10 10v20a10,10 0,0 1,-10 10h-20a10,10 0,0 1,-10 -10v-20a10,10 0,0 1,10 -10z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endColor="#0D9488"
+                android:endX="40"
+                android:endY="40"
+                android:startColor="#2563EB"
+                android:startX="0"
+                android:startY="0"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+    <group
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:translateX="6.8"
+        android:translateY="7.2">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z" />
+        <path
+            android:pathData="M4.5,11.5h3.2l1.6,-3.2 2.8,6 2,-4.2 1.2,1.4h4.2"
+            android:strokeWidth="1.8"
+            android:strokeColor="#2563EB"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+</vector>
