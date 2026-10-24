@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <!-- Bottom navigation tabs -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.healthmate.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_home" />
+
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.example.healthmate.ui.records.RecordsFragment"
+        android:label="@string/nav_records" />
+
+    <fragment
+        android:id="@+id/addRecordFragment"
+        android:name="com.example.healthmate.ui.addrecord.AddRecordFragment"
+        android:label="@string/nav_add" />
+
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.example.healthmate.ui.progress.ProgressFragment"
+        android:label="@string/nav_progress" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.healthmate.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings" />
+
+    <!-- Secondary screens (opened from the tabs above) -->
+    <fragment
+        android:id="@+id/editRecordFragment"
+        android:name="com.example.healthmate.ui.editrecord.EditRecordFragment"
+        android:label="@string/title_edit_record">
+        <argument
+            android:name="recordId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sleepFragment"
+        android:name="com.example.healthmate.ui.sleep.SleepFragment"
+        android:label="@string/title_sleep" />
+
+</navigation>

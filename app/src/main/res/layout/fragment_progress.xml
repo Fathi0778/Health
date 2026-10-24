@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hm_background"
+    tools:context=".ui.progress.ProgressFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="true"
+            android:text="@string/title_progress"
+            android:textAppearance="@style/TextAppearance.HealthMate.Headline" />
+
+        <TextView
+            android:id="@+id/text_progress_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textAppearance="@style/TextAppearance.HealthMate.Body"
+            tools:text="Last 7 days · 12 Oct – 18 Oct" />
+
+        <!-- Summary tiles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tile_avg_steps"
+                layout="@layout/item_stat_tile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/tile_avg_water"
+                layout="@layout/item_stat_tile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_gap"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tile_total_calories"
+                layout="@layout/item_stat_tile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/tile_avg_sleep"
+                layout="@layout/item_stat_tile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- How averages are calculated -->
+        <TextView
+            android:id="@+id/text_progress_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_gap"
+            android:background="@drawable/bg_date_block"
+            android:drawablePadding="10dp"
+            android:padding="12dp"
+            android:textColor="@color/hm_primary_dark"
+            android:textSize="13sp"
+            app:drawableStartCompat="@drawable/ic_info"
+            app:drawableTint="@color/hm_primary"
+            tools:text="Averages are calculated only from days that have a record (6 of 7 days)." />
+
+        <TextView
+            style="@style/HealthMate.SectionTitle"
+            android:text="@string/progress_goal_legend"
+            android:textAppearance="@style/TextAppearance.HealthMate.Label" />
+
+        <include
+            android:id="@+id/chart_steps"
+            layout="@layout/item_chart_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/chart_calories"
+            layout="@layout/item_chart_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_gap" />
+
+        <include
+            android:id="@+id/chart_water"
+            layout="@layout/item_chart_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_gap" />
+
+        <include
+            android:id="@+id/chart_sleep"
+            layout="@layout/item_chart_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_gap" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_open_sleep"
+            style="@style/Widget.HealthMate.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/progress_open_sleep"
+            android:textColor="@color/hm_sleep"
+            app:icon="@drawable/ic_sleep"
+            app:iconTint="@color/hm_sleep" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

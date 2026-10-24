@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Form fields used by both Add and Edit screens (added with <include>) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Date (opens a DatePicker) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/form_date"
+        app:endIconDrawable="@drawable/ic_chevron_right"
+        app:endIconMode="custom"
+        app:endIconContentDescription="@string/form_pick_date"
+        app:startIconDrawable="@drawable/ic_calendar"
+        app:startIconTint="@color/hm_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:inputType="none"
+            android:longClickable="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Steps -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="@string/form_steps"
+        app:helperText="@string/form_steps_helper"
+        app:startIconDrawable="@drawable/ic_steps"
+        app:startIconTint="@color/hm_steps"
+        app:suffixText="@string/unit_steps">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="9" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Calories -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/form_calories"
+        app:helperText="@string/form_calories_helper"
+        app:startIconDrawable="@drawable/ic_calories"
+        app:startIconTint="@color/hm_calories"
+        app:suffixText="@string/unit_kcal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="9" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Water -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_water"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/form_water"
+        app:helperText="@string/form_water_helper"
+        app:startIconDrawable="@drawable/ic_water"
+        app:startIconTint="@color/hm_water"
+        app:suffixText="@string/unit_ml">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="9" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Sleep: hours and minutes side by side -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_sleep_hours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1.25"
+            android:hint="@string/form_sleep_hours"
+            app:helperText="@string/form_sleep_hours_helper"
+            app:startIconDrawable="@drawable/ic_sleep"
+            app:startIconTint="@color/hm_sleep"
+            app:suffixText="@string/unit_h">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_sleep_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_sleep_minutes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:hint="@string/form_sleep_minutes"
+            app:helperText="@string/form_sleep_minutes_helper"
+            app:suffixText="@string/unit_min">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_sleep_minutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</LinearLayout>

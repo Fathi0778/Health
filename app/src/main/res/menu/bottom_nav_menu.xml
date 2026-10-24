@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The ids here must be the same as the screen ids in nav_graph.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/recordsFragment"
+        android:icon="@drawable/ic_records"
+        android:title="@string/nav_records" />
+    <item
+        android:id="@+id/addRecordFragment"
+        android:icon="@drawable/ic_add_circle"
+        android:title="@string/nav_add" />
+    <item
+        android:id="@+id/progressFragment"
+        android:icon="@drawable/ic_progress"
+        android:title="@string/nav_progress" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
+</menu>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hm_background"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="true"
+            android:text="@string/title_settings"
+            android:textAppearance="@style/TextAppearance.HealthMate.Headline" />
+        <!-- ===== Account ===== -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/card_padding">
+
+                <ImageView
+                    style="@style/HealthMate.IconChip"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_icon_chip"
+                    android:backgroundTint="@color/hm_primary_light"
+                    android:importantForAccessibility="no"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/hm_primary" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_account_title"
+                        android:textAppearance="@style/TextAppearance.HealthMate.Title" />
+
+                    <TextView
+                        android:id="@+id/text_signed_in_as"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.HealthMate.Label"
+                        tools:text="Signed in as Fathima" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_logout"
+                    style="@style/Widget.HealthMate.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_logout"
+                    android:textColor="@color/hm_error" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===== Daily goals ===== -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_goals_title"
+                    android:textAppearance="@style/TextAppearance.HealthMate.Title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/settings_goals_subtitle"
+                    android:textAppearance="@style/TextAppearance.HealthMate.Body"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_goal_steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/settings_goal_steps"
+                    app:startIconDrawable="@drawable/ic_steps"
+                    app:startIconTint="@color/hm_steps"
+                    app:suffixText="@string/unit_steps">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_goal_steps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="9" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_goal_calories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/settings_goal_calories"
+                    app:startIconDrawable="@drawable/ic_calories"
+                    app:startIconTint="@color/hm_calories"
+                    app:suffixText="@string/unit_kcal">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_goal_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="9" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_goal_water"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/settings_goal_water"
+                    app:startIconDrawable="@drawable/ic_water"
+                    app:startIconTint="@color/hm_water"
+                    app:suffixText="@string/unit_ml">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_goal_water"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="9" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_goal_sleep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/settings_goal_sleep"
+                    app:startIconDrawable="@drawable/ic_sleep"
+                    app:startIconTint="@color/hm_sleep"
+                    app:suffixText="@string/unit_hours">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_goal_sleep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789.,"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/settings_goal_note"
+                    android:textAppearance="@style/TextAppearance.HealthMate.Body"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_info"
+                    app:drawableTint="@color/hm_text_secondary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_save_goals"
+                    style="@style/Widget.HealthMate.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/settings_save_goals"
+                    app:icon="@drawable/ic_check_circle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_reset_goals"
+                    style="@style/Widget.HealthMate.Button.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/settings_reset_goals"
+                    app:icon="@drawable/ic_restart" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===== About ===== -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_logo" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_about_title"
+                            android:textAppearance="@style/TextAppearance.HealthMate.Title" />
+
+                        <TextView
+                            android:id="@+id/text_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.HealthMate.Label"
+                            tools:text="Version 1.0 (build 1)" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/settings_about_body"
+                    android:textAppearance="@style/TextAppearance.HealthMate.Body" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_pill"
+                    android:backgroundTint="@color/hm_secondary_light"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/settings_privacy"
+                    android:textColor="@color/hm_secondary_dark"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_lock"
+                    app:drawableTint="@color/hm_secondary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_show_welcome"
+                    style="@style/Widget.HealthMate.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_show_welcome"
+                    app:icon="@drawable/ic_heart" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

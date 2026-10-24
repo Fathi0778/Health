@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Small tile (icon, value, label) used on the Progress and Sleep screens -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/stat_icon"
+            style="@style/HealthMate.IconChip"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_icon_chip"
+            tools:backgroundTint="@color/hm_steps_light"
+            tools:src="@drawable/ic_steps"
+            tools:tint="@color/hm_steps" />
+
+        <TextView
+            android:id="@+id/stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.HealthMate.Value"
+            android:textSize="20sp"
+            tools:text="8,935" />
+
+        <TextView
+            android:id="@+id/stat_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.HealthMate.Label"
+            tools:text="Avg daily steps" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
