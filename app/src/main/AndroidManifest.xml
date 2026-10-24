@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- The app works fully offline, so there is no INTERNET permission -->
+
     <application
+        android:name=".HealthMateApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,6 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthMate">
+
+        <!-- Main screen (opens from the app icon). Sends new users to welcome / login -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -21,6 +26,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Welcome screen (first launch only) -->
+        <activity
+            android:name=".ui.onboarding.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HealthMate.Welcome" />
+
+        <!-- Login / create account screen -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HealthMate.Welcome"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
