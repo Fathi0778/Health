@@ -26,7 +26,7 @@
     <string name="welcome_feature_sleep">Sleep hours</string>
     <string name="welcome_feature_progress">Weekly progress</string>
     <string name="welcome_get_started">Get Started</string>
-    <string name="welcome_privacy">No account needed · Works fully offline</string>
+    <string name="welcome_privacy">Works fully offline</string>
 
     <!-- Metric names and units -->
     <string name="metric_steps">Steps</string>
