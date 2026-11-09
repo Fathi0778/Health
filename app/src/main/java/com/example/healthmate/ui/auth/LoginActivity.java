@@ -100,9 +100,18 @@ public class LoginActivity extends AppCompatActivity {
         passwordInput.setOnEditorActionListener(done);
         confirmInput.setOnEditorActionListener(done);
 
-        boolean register = savedInstanceState != null
-                && savedInstanceState.getBoolean(STATE_REGISTER_MODE, false);
-        setRegisterMode(register);
+        if (savedInstanceState != null) {
+            // screen rotated: keep the mode the user was in
+            setRegisterMode(savedInstanceState.getBoolean(STATE_REGISTER_MODE, false));
+        } else {
+            // no accounts yet -> start on "Create account"; otherwise -> "Log in"
+            setRegisterMode(false);
+            viewModel.hasAccounts().observe(this, hasAccounts -> {
+                if (!hasAccounts) {
+                    setRegisterMode(true);
+                }
+            });
+        }
     }
 
     private void setRegisterMode(boolean register) {

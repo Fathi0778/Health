@@ -47,4 +47,9 @@ public class AuthViewModel extends AndroidViewModel {
         });
         return result;
     }
+    public LiveData<Boolean> hasAccounts() {
+        MutableLiveData<Boolean> result = new MutableLiveData<>();
+        repository.hasAccounts(result::postValue);
+        return result;
+    }
 }

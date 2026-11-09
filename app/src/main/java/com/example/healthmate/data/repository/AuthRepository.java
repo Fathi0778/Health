@@ -116,4 +116,20 @@ public class AuthRepository {
             }
         });
     }
+    public interface AccountsCallback {
+        void onResult(boolean hasAccounts);
+    }
+
+    // true if at least one account exists on this phone
+    public void hasAccounts(@NonNull AccountsCallback callback) {
+        executor.execute(() -> {
+            boolean has;
+            try {
+                has = userDao.count() > 0;
+            } catch (Exception e) {
+                has = true; // if something goes wrong, show the normal login screen
+            }
+            callback.onResult(has);
+        });
+    }
 }
